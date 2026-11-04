@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "attendance",
+      "type": "string"
+    },
+    "event": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "user": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "present",
+        "absent",
+        "maybe"
+      ],
+      "type": "string"
+    },
+    "voice": {
+      "enum": [
+        "Soprano",
+        "Alto",
+        "Tenor",
+        "Baryton",
+        "Basse",
+        "Autre"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "event",
+    "user",
+    "status",
+    "voice"
+  ],
+  "additionalProperties": true
+}

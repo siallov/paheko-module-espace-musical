@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "enum": [
+        "song",
+        "event",
+        "news"
+      ],
+      "type": "string"
+    },
+    "archived": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "body": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20000
+    },
+    "lyrics": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50000
+    },
+    "day": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 24
+    },
+    "end_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 24
+    },
+    "place": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 500
+    },
+    "composer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 300
+    },
+    "repertoire_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 80
+    },
+    "programme_order": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100000
+    },
+    "public_event": {
+      "type": "boolean"
+    },
+    "pdf_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2048
+    },
+    "audio_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2048
+    },
+    "extra_audio_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2048
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2048
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "additionalProperties": true
+}
